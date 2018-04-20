@@ -1,0 +1,10 @@
+<h1>ADMIN PRODUCT VIEWER</h1>
+<div class="container">
+  <ul>
+    <% @lists.each do |list| %>
+       <li><%= link_to food.name, food_path(food)%></li>
+    <% end %>
+  </ul>
+
+  <%= link_to "ADD a product", new_food_path %>
+</div>
