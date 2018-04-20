@@ -1,7 +1,7 @@
 <h1>ADMIN PRODUCT VIEWER</h1>
 <div class="container">
   <ul>
-    <% @lists.each do |list| %>
+    <% @foods.each do |food| %>
        <li><%= link_to food.name, food_path(food)%></li>
     <% end %>
   </ul>

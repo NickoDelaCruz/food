@@ -4,13 +4,13 @@
 
 <div class="container body-portion">
   <center>
-    <!-- <ul>
-      <% @lists.each do |list| %>
-         <a href="<%=list_path(list)%>"><img class="img-fluid" src="<%= list.image %>" /></a>
+    <ul>
+      <% @foods.each do |food| %>
+         <a href="<%=food_path(food)%>"><img class="img-fluid" src="<%= food.image %>" /></a>
       <% end %>
-    </ul> -->
+    </ul>
 
-    <h3 id="portfolio">Projects with most comments</h3>
+    <!-- <h3 id="portfolio">Projects with most comments</h3>
 
     <ul>
       <% @lists.most_tasks_ascending.each do |list| %>
@@ -31,7 +31,7 @@
       <% @alphaSort.each do |list| %>
         <a href="<%=list_path(list)%>"><img class="img-fluid" src="<%= list.image %>" /></a>
       <% end %>
-    </ul>
+    </ul> -->
 
   </center>
 </div>
