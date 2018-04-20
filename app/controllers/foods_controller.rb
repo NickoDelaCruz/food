@@ -1,13 +1,14 @@
 class FoodsController < ApplicationController
-  # def home
-  # @foods = Food.all
-  # @alphaSort = @foods.sort_by {|obj| obj.name}
-  # render :home
-  # end
-  def index
-      @foods = Food.all
-      render :index
-    end
+  def home
+  @foods = Food.all
+  @alphaSort = @foods.sort_by {|obj| obj.name}
+  render :home
+  end
+
+  # def index
+  #     @foods = Food.all
+  #     render :index
+  #   end
 
     def show
       @food = Food.find(params[:id])
