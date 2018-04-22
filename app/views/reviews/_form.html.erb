@@ -1,0 +1,7 @@
+<%= render('layouts/errors', :object => @review) %>
+
+<%= form_for [@food, @review] do |f| %>
+  <%= f.label :comments %>
+  <%= f.text_field :description %>
+  <p><%= f.submit %></p>
+<% end %>
