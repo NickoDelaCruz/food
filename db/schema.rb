@@ -14,19 +14,20 @@ ActiveRecord::Schema.define(version: 2018_04_18_222346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "foods", force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
     t.string "name"
+    t.integer "cost"
+    t.string "country"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
-    t.string "description"
-    t.string "area"
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "description"
-    t.integer "food_id"
+    t.string "author"
+    t.text "content_body"
+    t.integer "rating"
+    t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

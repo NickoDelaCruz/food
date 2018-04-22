@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root :to => 'foods#home'
-  resources :foods do
+  root :to => 'products#index'
+  resources :products do
     resources :reviews
   end
 end
