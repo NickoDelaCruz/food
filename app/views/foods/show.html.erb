@@ -1,4 +1,4 @@
-<% content_for(:title, "Foods | Food") %>
+<% content_for(:title, "Foods | To Do") %>
 
 <h1><%= @food.name %></h1>
 <img src="<%= @food.image %>" />
@@ -25,9 +25,9 @@
   <p>There are no comments yet!</p>
 <% end %>
 
-<p><%= link_to "ADD A COMMENT", new_food_review_path(@list) %></p>
+<p><%= link_to "ADD A COMMENT", new_food_review_path(@food) %></p>
 <p><%= link_to "Edit", edit_food_url %></p>
-<p><%= link_to "Delete Product", food_path(@list),
+<p><%= link_to "Delete Product", food_path(@food),
                           :data => {:confirm => "You sure?",
                                     :method => "delete"} %></p>
 

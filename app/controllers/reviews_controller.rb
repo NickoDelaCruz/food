@@ -1,7 +1,6 @@
 class ReviewsController < ApplicationController
-  def new
-  @food = Food.find(params[:food_id])
-  @review = @food.reviews.new
+  def index
+  @reviews = Review.all
   end
 
 
@@ -9,7 +8,7 @@ class ReviewsController < ApplicationController
     @food = Food.find(params[:food_id])
     @review = @food.reviews.new(reviews_params)
     if @food.save
-      redirect_to food_path(@reviews.list)
+      redirect_to food_path(@reviews.food)
     else
       render :new
     end

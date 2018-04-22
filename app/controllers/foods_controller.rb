@@ -1,9 +1,9 @@
 class FoodsController < ApplicationController
 
-  def home
+  def index
   @foods = Food.all
   # @alphaSort = @foods.sort_by {|obj| obj.name}
-  render :home
+  render :index
   end
 
   # def index
@@ -59,7 +59,7 @@ class FoodsController < ApplicationController
 
     private
     def food_params
-      params.require(:list).permit(:name, :image, :description, :area)
+      params.require(:food).permit(:name, :image, :description, :area)
     end
 
   end
