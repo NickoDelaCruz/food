@@ -1,5 +1,11 @@
-<h1><b>Mario's Food</b></h1><br>
+<h1><b>Mario's Food</b></h1>
+
+
+
+<br>
+
 <hr>
+
 <h2>Newest Items:</h2>
 <div class="row">
   <ul style="list-style-type:none">
@@ -22,3 +28,32 @@
   </ul>
 </div>
     <button class="btn"><%= link_to "Add a Product", new_product_path %></button>
+
+
+
+
+    <br>
+
+    <hr>
+
+
+  <div class="col-md-4">
+    <h2>SALE/DEALS:</h2>
+    <ul style="list-style-type:none">
+      <% @lowcost.each do |product| %>
+      <li>
+        <div class="well">
+          <b><%= product.name %></b>
+          <br>
+          $<%= product.cost %>.00
+          <br>
+          <p><strong>SERIAL NUMBER:#000011211996<%= product.id %></strong></p>
+          <br>
+          <%= link_to "DETAILS", product_path(product) %>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+  </div>
