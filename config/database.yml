@@ -8,25 +8,11 @@ default: &default
 development:
   <<: *default
   database: Food_development
-  username: postgres
-  password: happy123
-  pool: 5
-  timeout: 5000
-
 
 test:
   <<: *default
   database: Food_test
-  username: postgres
-  password: happy123
-  pool: 5
-  timeout: 5000
-
 
 production:
   <<: *default
   database: Food_production
-  username: postgres
-  password: happy123
-  pool: 5
-  timeout: 5000
