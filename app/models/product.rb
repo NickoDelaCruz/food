@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
 
   scope :sort_date, -> {order(created_at: :desc).limit(3)}
   scope :sort_cost, -> {order(cost: :asc).limit(5)}
-  scope :sort_local, -> { Product.where(country: "United States") }
+  scope :sort_local, -> { Product.where(country: ["United States", "USA", "America"]) }
   scope :most_reviews, -> {
     left_joins(:reviews)
       .group(:id)
