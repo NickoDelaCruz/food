@@ -7,4 +7,10 @@ Review.destroy_all
   country: Faker::Address.country,
   cost: Faker::Number.decimal(2,2)
   )
+  7.times do |index|
+  review = Review.create!(author: Faker::DragonBall.character,
+  content_body: Faker::Lorem.sentence(15, false, 0),
+  product_id: product.id,
+  rating: Faker::Number.between(1,5))
+end
 end
