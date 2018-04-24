@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :authorize, only: [:destroy]
+
   def index
     @reviews = Review.all
   end
@@ -40,6 +42,8 @@ class ReviewsController < ApplicationController
     end
   end
 
+
+
   def destroy
     @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
@@ -47,8 +51,11 @@ class ReviewsController < ApplicationController
     redirect_to product_path(@review.product)
   end
 
+
 private
   def review_params
     params.require(:review).permit(:author, :content_body, :rating)
   end
+
+
 end
